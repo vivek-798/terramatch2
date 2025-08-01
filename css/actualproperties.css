@@ -1,0 +1,214 @@
+/* File: actualproperties.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary-color: #0d9488;
+  --secondary-color: #115e59;
+  --text-color: #333;
+  --light-gray: #f4f4f4;
+  --dark-gray: #555;
+  --border-color: #ddd;
+  --white: #fff;
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --green-gradient: linear-gradient(135deg, #0d9488, #115e59);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden; 
+    overflow-y: auto;  
+    background-color: rgb(229, 231, 235); 
+}
+
+.navbar{
+    height: 70px;
+    width: 100%;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+.navbar .logo a{
+    font-weight: 800;
+    font-size: larger;
+    text-decoration: none;
+    margin-left: 40px;
+    color: black;
+}
+.navbar .profile{
+    margin-right: 40px;
+}
+.navbar ul{
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+.navbar ul a{
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+.navbar ul a:hover {
+  color: var(--primary-color);
+}
+
+.text-center{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.text-center h1 {
+  color: var(--secondary-color);
+}
+.text-center p {
+  color: var(--dark-gray);
+}
+
+.filter-box{
+    margin: 40px;
+    padding: 20px;
+    border: 1px var(--border-color) solid;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--white);
+    box-shadow: var(--box-shadow);
+}
+.search {
+    flex-grow: 1;
+    margin-right: 15px;
+}
+.input-box{
+    padding: 10px;
+    width: 100%;
+    border: 1px var(--border-color) solid;
+    border-radius:10px;
+}
+
+.btnstyle {
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: 1px var(--border-color) solid;
+  background-color: var(--light-gray);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.btnstyle:hover {
+  background-color: var(--primary-color);
+  color: var(--white);
+  border-color: var(--primary-color);
+}
+
+.btnstyle img {
+  width: 15px;
+}
+
+.filter.btnstyle {
+  background: var(--green-gradient);
+  color: var(--white);
+  border: none;
+  padding: 12px 20px;
+  font-weight: 600;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.property-listings-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px 40px;
+}
+
+.property-card {
+    background-color: var(--white);
+    border-radius: 12px;
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.property-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.property-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.property-card-content {
+    padding: 20px;
+}
+
+.property-card h3 {
+    font-size: 20px;
+    color: var(--secondary-color);
+    margin-bottom: 5px;
+}
+
+.property-card .location {
+    font-size: 14px;
+    color: var(--dark-gray);
+    margin-bottom: 10px;
+}
+
+.property-card .price {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.property-card .details p {
+    font-size: 14px;
+    color: var(--dark-gray);
+    margin-bottom: 5px;
+}
+
+.loading-message {
+    text-align: center;
+    grid-column: 1 / -1;
+    color: var(--dark-gray);
+}
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .links ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .filter-box {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .search {
+    width: 100%;
+    margin-right: 0;
+  }
+  .btnstyle {
+    width: 100%;
+    justify-content: center;
+  }
+}
+

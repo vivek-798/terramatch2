@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>properties</title>
+    <link rel="stylesheet" href="/terramatch/css/actualproperties.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="logoside">
+        <span class="logo"><a href="homepage.html">TerraMatch</a></span>
+      </div>
+      <div class="links">
+        <ul>
+          <li><a href="properties.html">properties</a></li>
+          <li><a href="#location">location</a></li>
+          <li><a href="price-estimator.html">Price Estimator</a></li>
+          <li><a href="sell.html">sell</a></li>
+        </ul>
+      </div>
+      <div class="profile">
+        <span class="profileimg" id="profile"
+          ><a href="#profile"
+            ><img src="/terramatch/logos/profile.svg" alt="img"
+          /></a>
+        </span>
+      </div>
+    </div>
+    <div class="text-center">
+      <h1>Explore Land Listings</h1>
+      <p>Find your next investment from our curated list of properties.</p>
+    </div>
+    <div class="filter-box">
+      <div class="search">
+        <input
+          class="input-box"
+          id="search-input"
+          placeholder="Search by city, village, or keyword..."
+        />
+      </div>
+      <button class="types btnstyle" id="types-dropdown">
+        <span>types of land</span>
+        <img src="/terramatch/logos/dropdown.svg" alt="" />
+      </button>
+      <button class="price btnstyle" id="price-dropdown">
+        <span>All Prices</span>
+        <img src="/terramatch/logos/dropdown.svg" alt="" />
+      </button>
+      <button class="filter btnstyle" id="apply-filters-btn">
+        Apply Filters
+      </button>
+    </div>
+
+    <div class="property-listings-container" id="property-listings">
+      <!-- Property cards will be dynamically inserted here by JavaScript -->
+      <p class="loading-message">Loading properties...</p>
+    </div>
+
+    <script type="module" src="/terramatch/js/properties.js"></script>
+  </body>
+</html>

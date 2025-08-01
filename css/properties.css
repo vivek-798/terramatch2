@@ -1,0 +1,319 @@
+/* File: properties.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary-color: #0d9488;
+  --secondary-color: #115e59;
+  --text-color: #333;
+  --light-gray: #f4f4f4;
+  --dark-gray: #555;
+  --border-color: #ddd;
+  --white: #fff;
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --green-gradient: linear-gradient(135deg, #0d9488, #115e59);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: var(--light-gray);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.logoside .logo a {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.logoside .logo a:hover {
+  color: var(--secondary-color);
+}
+
+.links ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+.links a {
+  text-decoration: none;
+  color: var(--dark-gray);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.links a:hover {
+  color: var(--primary-color);
+}
+
+.profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid var(--primary-color);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.profile img:hover {
+  transform: scale(1.1);
+}
+
+/* Back button styles */
+.back {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.back img {
+  width: 20px;
+  height: 20px;
+}
+
+.back a {
+  text-decoration: none;
+  color: var(--dark-gray);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.back a:hover {
+  color: var(--primary-color);
+}
+
+/* Text content styles */
+.text-content {
+  margin: 40px 0;
+  text-align: center;
+}
+
+.text-content h1 {
+  font-size: 40px;
+  color: var(--secondary-color);
+  margin-bottom: 10px;
+}
+
+.text-content p {
+  color: var(--dark-gray);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Estimation Grid Container */
+.estimation-grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+/* Common box styles */
+.propertydetails,
+.estimation {
+  background-color: var(--white);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: var(--box-shadow);
+}
+
+.top h3 {
+  font-size: 24px;
+  color: var(--secondary-color);
+}
+
+.top p {
+  color: var(--dark-gray);
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/* Form styles */
+.inputboxes {
+  margin-top: 20px;
+}
+
+.inputbox-row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.inputs-area {
+  flex: 1;
+}
+
+.inputs-area label,
+.textarea-container label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--dark-gray);
+}
+
+.inputs-area input,
+.inputs-area select,
+.textarea-container textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.inputs-area input:focus,
+.inputs-area select:focus,
+.textarea-container textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+.textarea-container {
+  margin-bottom: 20px;
+}
+
+.textarea-container textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.estimate-button {
+  width: 100%;
+  padding: 15px;
+  background: var(--green-gradient);
+  color: var(--white);
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.estimate-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Estimation result styles */
+.estimation .output {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: var(--light-gray);
+  border-radius: 8px;
+  text-align: center;
+  min-height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  color: var(--dark-gray);
+}
+
+/* Modal styles */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1000; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  padding-top: 60px;
+}
+
+.modal-content {
+  background-color: var(--white);
+  margin: 5% auto; /* 5% from the top and centered */
+  padding: 30px;
+  border-radius: 12px;
+  width: 80%;
+  max-width: 500px;
+  position: relative;
+  box-shadow: var(--box-shadow);
+  text-align: center;
+}
+
+.close-button {
+  color: #aaa;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: var(--primary-color);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#message-text {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+/* Result message styling */
+.success {
+  color: #10b981; /* Green */
+}
+
+.error {
+  color: #ef4444; /* Red */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .estimation-grid-container {
+    grid-template-columns: 1fr;
+  }
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .links ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .text-content h1 {
+    font-size: 32px;
+  }
+  .inputbox-row {
+    flex-direction: column;
+    gap: 0;
+  }
+}
